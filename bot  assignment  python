@@ -1,0 +1,86 @@
+5) 
+myList = []
+ 
+
+
+n = int(input("How many element in list  "))
+ 
+for i in range(n):
+    storeElement = input ("Enter the string :- ")
+    myList.append (storeElement)
+ 
+
+
+    
+print("How far is "+str(myList[0])+ " from " +str(myList[1]))
+print("How far is "+str(myList[1])+ " from " +str(myList[0]))
+
+
+print("How is the weather in " +str(myList[0]))
+print("How is the weather in " +str(myList[1]))
+
+
+Output Ela vasthadhi:
+How many element in list  2
+Enter the string :- kolakata
+Enter the string :- mumbai
+How far is kolakata from mumbai
+How far is mumbai from kolakata
+How is the weather in kolakata
+How is the weather in mumbai
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+6) 
+dict_list=[{'name': 'affirm', 'confidence': 0.9448149204254}, {'name': 'affirm', 'confidence': 0.944814920425415}, {'name': 'inform', 'confidence': 0.9842240810394287}, {'name': 'inform', 'confidence': 0.9842240810394287}]
+
+
+
+
+  
+
+
+#res = list(map(dict, set(tuple(sub.items() for sub in dict_list)))
+res = list(map(dict, set(tuple(sub.items()) for sub in dict_list)))
+
+
+  
+
+
+print("after removing duplicates : " + str(res))
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+7)
+import re
+m= input("Enter password : ")
+t = True
+while t:  
+    if (len(m)<6 or len(m)>16):
+        break
+    elif not re.search("[a-z]",m):
+        break
+    elif not re.search("[0-9]",m):
+        break
+    elif not re.search("[A-Z]",m):
+        break
+    elif not re.search("[\"!#$%&'()*+,-./:;<=>?@[\]^_`{|}~]",m):      
+        break
+    elif re.search("\s",m):
+        break
+    else:
+        print("Valid Password")
+        t=False
+        break
+
+
+if t:
+    print("Invalid Password")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8)
+
+
+from collections import Counter
+d1 = {'a': 100, 'b': 200, 'c':300}
+d2 = {'a': 300, 'b': 200, 'd':400}
+  
+d = Counter(d1) + Counter(d2)
+print(d)
